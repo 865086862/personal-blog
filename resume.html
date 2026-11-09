@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="zh-CN" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no,email=no,address=no" />
+  <title>张子鑫 - AI技术高级版简历</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #111827;
+      --muted: #4b5563;
+      --soft: #6b7280;
+      --line: #d7dde7;
+      --paper: #ffffff;
+      --wash: #f5f8fb;
+      --accent: #008fbd;
+      --accent-soft: #e8f7fb;
+      --radius: 8px;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #edf2f7;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    body {
+      padding: 24px;
+    }
+
+    .resume {
+      display: grid;
+      gap: 18px;
+    }
+
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      /* blueprint-circuit-background */
+      background: rgba(255, 255, 255, 0.5);
+      background-size: 18mm 18mm, 18mm 18mm, 100% 100%, 100% 100%, 100% 100%, auto;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 55px rgba(17, 24, 39, 0.13);
+      padding: 12mm 13mm;
+    }
+
+    .sheet::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 5mm;
+      background: var(--accent);
+    }
+
+    .sheet::after {
+      content: "";
+      position: absolute;
+      right: 8mm;
+      bottom: 8mm;
+      width: 72mm;
+      height: 42mm;
+      opacity: 0.13;
+      background:
+        linear-gradient(90deg, transparent 0 13%, var(--accent) 13% 13.8%, transparent 13.8% 100%),
+        linear-gradient(90deg, transparent 0 47%, var(--accent) 47% 47.7%, transparent 47.7% 100%),
+        linear-gradient(180deg, transparent 0 38%, var(--accent) 38% 39%, transparent 39% 100%),
+        linear-gradient(180deg, transparent 0 72%, var(--accent) 72% 73%, transparent 73% 100%),
+        radial-gradient(circle at 13% 38%, var(--accent) 0 1.8mm, transparent 1.9mm),
+        radial-gradient(circle at 47% 38%, var(--accent) 0 1.4mm, transparent 1.5mm),
+        radial-gradient(circle at 47% 72%, var(--accent) 0 1.8mm, transparent 1.9mm),
+        radial-gradient(circle at 82% 72%, var(--accent) 0 1.5mm, transparent 1.6mm);
+      background-repeat: no-repeat;
+      pointer-events: none;
+      /* blueprint-node-map */
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding-left: 3mm;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 8mm;
+      align-items: end;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 7mm;
+      margin-bottom: 6mm;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .role {
+      margin: 3mm 0 1.5mm;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .positioning {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 2mm;
+    }
+
+    .contact span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      padding: 1.4mm 2.4mm;
+      color: var(--muted);
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin-top: 5mm;
+    }
+
+    .section-title {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3mm;
+      align-items: center;
+      margin: 0 0 2.8mm;
+      color: var(--accent);
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .section-title::after {
+      content: "";
+      height: 1px;
+      background: var(--line);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .summary p,
+    .project-summary,
+    .profile {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5mm;
+      margin-top: 4mm;
+    }
+
+    .metric {
+      min-height: 23mm;
+      border: 1px solid rgba(0, 143, 189, 0.24);
+      border-radius: var(--radius);
+      background: var(--accent-soft);
+      padding: 2.5mm;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--accent);
+      font-size: 17px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 1.8mm;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2.4mm;
+    }
+
+    .skill-group {
+      border-top: 2px solid var(--accent);
+      padding-top: 2mm;
+    }
+
+    .skill-group h3 {
+      margin: 0 0 1.8mm;
+      font-size: 11px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4mm;
+    }
+
+    .chip {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.8mm 1.6mm;
+      color: var(--muted);
+      background: #fff;
+      font-size: 9px;
+    }
+
+    .projects {
+      display: grid;
+      gap: 4mm;
+    }
+
+    .project {
+      break-inside: avoid;
+      border-left: 3px solid var(--accent);
+      padding-left: 3mm;
+      margin-bottom: 8mm;
+    }
+
+    .project-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4mm;
+      align-items: start;
+      margin-bottom: 1.8mm;
+    }
+
+    .project h3 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .project-head p,
+    .project-head time {
+      margin: 1mm 0 0;
+      color: var(--soft);
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .stack {
+      margin: 1.6mm 0 1.2mm;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    ul {
+      margin: 1.6mm 0 0;
+      padding-left: 4.6mm;
+    }
+
+    li {
+      margin: 0 0 1.2mm;
+      color: #263244;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 8mm;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 2.2mm;
+    }
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 28mm 1fr;
+      gap: 2mm 4mm;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1mm;
+    }
+
+    .timeline-row time {
+      color: var(--soft);
+      font-size: 10px;
+    }
+
+    .timeline-row strong {
+      font-size: 11px;
+    }
+
+    .timeline-row span {
+      grid-column: 2;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .minor-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2.4mm 5mm;
+    }
+
+    .projects-tight {
+      gap: 3mm;
+    }
+
+    .projects-tight .project {
+      padding-left: 2.6mm;
+    }
+
+    .projects-tight .project-summary,
+    .project-compact .project-summary {
+      font-size: 10.5px;
+      line-height: 1.48;
+    }
+
+    .projects-tight li {
+      margin-bottom: 0.8mm;
+      font-size: 10.5px;
+      line-height: 1.45;
+    }
+
+    .project-compact {
+      border-left-color: var(--line);
+    }
+
+    .footer-note {
+      margin-top: 4mm;
+      color: var(--soft);
+      font-size: 9px;
+      text-align: right;
+    }
+
+    @media screen and (max-width: 900px) {
+      body {
+        padding: 12px;
+      }
+
+      .sheet {
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+      }
+
+      .hero,
+      .summary,
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        justify-content: flex-start;
+      }
+
+      .metrics,
+      .skills {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project-head {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+
+      html,
+      body {
+        width: 210mm;
+        background: #fff;
+      }
+
+      body {
+        padding: 0;
+      }
+
+      .resume {
+        gap: 0;
+      }
+
+      .sheet {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+        page-break-after: always;
+      }
+
+      .sheet:last-child {
+        page-break-after: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="resume">
+    <section class="sheet">
+      <div class="content">
+        <header class="hero">
+          <div>
+            <h1>张子鑫</h1>
+            <p class="role">前端开发工程师</p>
+            <p class="positioning">AI Agent / 前端工程化 / 监控体系 / 中后台平台 / Ai Coding</p>
+          </div>
+          <div class="contact">
+            <span>MOBILE：18018373116</span><span>E-MAIL：zhangzixin156@foxmail.com</span><span>Address：南京</span><span>求职目标：前端工程师</span>
+          </div>
+        </header>
+
+        <section class="section">
+          <h2 class="section-title">专业概况</h2>
+          <div class="summary">
+
+            <p>熟练使用 vue、react、uniapp、reactnative、eletron、微信小程序原生开发等主流前端框架
+              <br>
+              熟练使用node、python等后端语言、拥有一定后端开发经验
+            </p>
+            <p>7 年前端开发经验，有多行业软件开发经验，有丰富的项目开发和管理经验，监控库等基础能力搭建和页面优化经验<br>具备团队管理和协作能力</p>
+          </div>
+
+        </section>
+
+        <section class="section" style="margin-bottom: 4mm;">
+          <h2 class="section-title">专业技能</h2>
+          <div class="skills">
+            <section class="skill-group">
+              <h3>前端框架</h3>
+              <div class="chips"><span class="chip">Vue</span><span class="chip">React</span><span
+                  class="chip">UniApp</span><span class="chip">微信小程序</span></span><span
+                  class="chip">electron</span><span class="chip">React Native</span></div>
+            </section>
+
+            <section class="skill-group">
+              <h3>前端基础</h3>
+              <div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span
+                  class="chip">JavaScript</span><span class="chip">ES6+</span><span class="chip">HTTP</span><span
+                  class="chip">WebSocket</span></div>
+            </section>
+
+            <section class="skill-group">
+              <h3>UI 组件库</h3>
+              <div class="chips"><span class="chip">Element UI</span><span class="chip">Ant Design</span><span
+                  class="chip">Semi Design</span><span class="chip">Vant</span><span class="chip">Mint UI</span><span
+                  class="chip">uView</span></div>
+            </section>
+
+            <section class="skill-group">
+              <h3>工程化与安全</h3>
+              <div class="chips"><span class="chip">Git</span><span class="chip">webpack</span><span
+                  class="chip">前端加密</span><span class="chip">接口反爬</span><span class="chip">vite</span></div>
+            </section>
+
+            <section class="skill-group">
+              <h3>后端与AI工具</h3>
+              <div class="chips"><span class="chip">Python</span><span class="chip">Flask</span><span
+                  class="chip">CloudCode</span><span class="chip">Cursor</span><span class="chip">Codex</span><span
+                  class="chip">Nest</span></div>
+            </section>
+          </div>
+        </section>
+        <h2 class="section-title">项目成果</h2>
+        <div class="metrics">
+          <div class="metric">
+            <strong>100+ 项目接入</strong>
+            <span>统一前端异常监控链路覆盖多业务系统</span>
+          </div>
+
+          <div class="metric">
+            <strong>20+ AI 场景</strong>
+            <span>智能问答、文件解析、业务查询、任务执行复用</span>
+          </div>
+
+          <div class="metric">
+            <strong>40+ 组件沉淀</strong>
+            <span>基础与业务组件支撑 30+ 项目接入</span>
+          </div>
+
+          <div class="metric">
+            <strong>5s -> 1.5s</strong>
+            <span>CRM 首屏加载体验显著优化</span>
+          </div>
+        </div>
+        <section class="section">
+          <h2 class="section-title">项目经验</h2>
+          <div class="projects">
+            <article class="project ">
+              <div class="project-head">
+                <div>
+                  <h3>前端异常监控项目落地</h3>
+
+                </div>
+                <time>项目负责人</time>
+              </div>
+              <p class="project-summary">主导公司级前端异常监控平台建设，完成监控 SDK 二次封装、日志入库标准化、Kibana 看板、Alert2
+                告警规则和飞书实时通知，形成从异常采集到责任人触达的完整链路。</p>
+              <p class="stack"><strong>技术栈：</strong>Mito / Elasticsearch / Kibana / Alert2 / Node.js / Python / Nginx /
+                飞书告警</p>
+              <ul>
+                <li>基于 Mito 封装统一 SDK，规范项目标识、用户上下文、错误分级和上报字段，降低业务项目接入成本。</li>
+                <li>引入 Node.js 入库中间层处理字段标准化和兼容问题，减少日志入库失败，提升异常数据可用性。</li>
+                <li>开发 Python 告警规则生成工具，将项目差异化配置自动生成规则文件，并通过告警降噪提升有效告警比例。</li>
+                <li>累计接入 100+ 业务项目，覆盖 JavaScript、Promise、接口和资源加载异常，线上非业务问题反馈量下降约 40%，重复反馈减少约 30%。</li>
+              </ul>
+            </article>
+
+            <article class="project ">
+              <div class="project-head">
+                <div>
+                  <h3>AI Agent 智能助手平台</h3>
+
+                </div>
+                <time>前端开发工程师</time>
+              </div>
+              <p class="project-summary">参与 AI Chat 向 Agent 产品形态升级，负责对话核心链路、多类型消息渲染、文件上传解析入口、异常重试和工具执行结果展示，为业务用户提供更自然的
+                AI 交互体验。</p>
+              <p class="stack"><strong>技术栈：</strong>Vue 3 / Vant / SSE / Vite / Pinia / Dify 工作流</p>
+              <ul>
+                <li>完成会话模型、消息协议、任务步骤展示和工具执行结果的前端适配，支撑多版本快速迭代。</li>
+                <li>设计统一消息渲染层，支持文本、Markdown、表格、图表、流程图、数学公式、选择项和确认表单等形态。</li>
+                <li>使用 unified + remark + rehype 替代单一 Markdown 渲染方案，形成可扩展渲染管线，降低新增消息类型接入成本。</li>
+                <li>平台能力复用于知识问答、文件解析、业务查询、任务执行等 20+ 场景，部分高频任务处理链路缩短约 50%。</li>
+              </ul>
+            </article>
+
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="sheet">
+      <div class="content">
+
+        <section class="section">
+          <h2 class="section-title">项目经验</h2>
+          <div class="projects">
+            <article class="project ">
+              <div class="project-head">
+                <div>
+                  <h3>医药 CRM 数字化运营平台</h3>
+                </div>
+                <time>项目负责人</time>
+              </div>
+              <p class="project-summary">负责医药行业核心 CRM 系统开发与持续迭代，覆盖客户关系、学术活动、客户拜访、主数据和跨业务中间页等核心业务模块。</p>
+              <p class="stack"><strong>技术栈：</strong>Vue 2 / Vant / 飞书 H5 / ESLint / Prettier</p>
+              <ul>
+                <li>参与前期立项和技术方案讨论，负责项目初始化、脚手架搭建、基础工程配置、目录结构设计和开发规范制定。</li>
+                <li>负责 CRM 核心业务模块开发，完成页面开发、组件封装、接口联调和复杂业务逻辑处理。</li>
+                <li>推动 ESLint、Prettier、分支权限、Code Review 等规范落地，统一多模块代码风格，降低协作风险。</li>
+                <li>服务 5000+ 医药代表日常业务；通过入口拆分、懒加载、多页面打包和资源策略优化，将首屏时间由 5s 缩短至 1.5s。</li>
+                <li>负责项目团队长期的维护和开发</li>
+              </ul>
+            </article>
+
+
+
+            <article class="project ">
+              <div class="project-head">
+                <div>
+                  <h3>UI 组件库建设项目</h3>
+                </div>
+                <time>前端开发工程师</time>
+              </div>
+              <p class="project-summary">主导内部 UI 组件库建设与业务化封装，统一中后台系统组件规范、交互规范和视觉风格，推动多个业务系统接入组件库。</p>
+              <p class="stack"><strong>技术栈：</strong>Vue 3 / Element UI / Element Plus / npm 私服 / 文档站</p>
+              <ul>
+                <li>二次封装 Button、Form、Table、Dialog、Select、Upload 等高频组件，统一默认配置、交互规范和样式标准。</li>
+                <li>沉淀 SearchForm、ProTable、PageLayout、FormDialog、DictSelect、AuthButton 等业务组件，减少重复开发。</li>
+                <li>搭建组件库工程化体系，支持按需引入、主题变量定制、版本发布、变更日志维护和 npm 私服分发。</li>
+                <li>累计沉淀 40+ 基础及业务组件，支撑 30+ 业务项目接入，重复开发量下降约 40%，整体维护成本下降约 30%。</li>
+              </ul>
+            </article>
+            <article class="project ">
+              <div class="project-head">
+                <div>
+                  <h3>飞书 AI 机器任务转发平台</h3>
+                </div>
+                <time>后端开发工程师</time>
+              </div>
+              <p class="project-summary">负责飞书 AI 机器人后端服务开发，提供消息处理、AI 交互、语音转文字、文件上传等核心能力，支撑 CRM 4.0 机器人消息发送业务。</p>
+              <p class="stack"><strong>技术栈：</strong>NestJS / TypeScript / MySQL / TypeORM / 阿里云 OSS / 阿里云语音转文字 / ESLint
+                / Prettier
+              </p>
+              <ul>
+                <li>负责项目初始化和技术架构设计，基于 NestJS 框架搭建后端服务，配置环境管理、数据库连接和日志系统。</li>
+                <li>实现语音转文字功能，集成阿里云语音识别服务，支持音频消息转文本处理。</li>
+                <li>实现消息拦截和计划录入功能，支持用户通过关键词触发开始/结束录入，并自动调用 Agent 完成数据处理。</li>
+                <li>服务公司营销架构，提高团队录入拜访协作效率，推动规范化管理，团队录入率提升 30%。</li>
+              </ul>
+            </article>
+
+            <article class="project ">
+              <div class="project-head">
+                <div>
+                  <h3>患者管理小程序</h3>
+                </div>
+                <time>项目负责人</time>
+              </div>
+              <p class="project-summary">负责医药行业患者管理小程序从 0 到 1 的完整开发与持续迭代，涵盖患者信息管理、TL 脱落管理、数据统计分析、药品 / 癌种 / 医院 /
+                医生多维搜索等核心业务模块，服务全国
+                5000+ 医药代表日常业务开展。</p>
+              <p class="stack"><strong>技术栈：</strong>微信原生小程序开发</p>
+              <ul>
+                <li>负责项目全生命周期管理，包括小程序主体注册、资质审核、微信公众平台配置、版本提审与上线发布。</li>
+                <li>主导项目架构设计，完成页面路由配置、全局状态管理、目录结构规划和开发规范制定。</li>
+                <li>设计并实现部门切换、菜单筛选、搜索组件、空状态提示等公共组件，统一 UI 风格并降低重复开发成本。</li>
+                <li>建立代码维护和用户反馈机制，快速响应需求变更和线上问题，累计处理需求迭代 50+ 次、bug 修复 100+ 个。</li>
+              </ul>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+    </section>
+    <section class="sheet">
+      <div class="content">
+        <!-- <section class="section">
+          <h2 class="section-title">近期新增项目</h2>
+          <div class="projects projects-tight">
+         
+          </div>
+        </section> -->
+
+        <section class="section">
+          <h2 class="section-title">项目经验</h2>
+          <div class="minor-list">
+            <article class="project project-compact">
+              <div class="project-head">
+                <div>
+                  <h3>噪声分析平台-Electron</h3>
+                  <p>前端开发工程师</p>
+                </div>
+              </div>
+
+              <p class="project-summary">基于Electron搭建的噪声分析平台，完成噪声数据可视化、噪声数据分析、噪声数据导入导出等功能模块。</p>
+              </p>
+            </article>
+            <article class="project project-compact">
+              <div class="project-head">
+                <div>
+                  <h3>智育芸 App 及后台系统开发</h3>
+                  <p>项目负责人</p>
+                </div>
+              </div>
+              <p class="project-summary">负责教育平台 App 内 H5 项目从 0 到 1 搭建，带领 2
+                名前端工程师完成教师端、家长端课程管理、通知公告、课后服务等模块，项目在南京、苏州等多城市多学校落地。</p>
+            </article>
+
+            <article class="project project-compact">
+              <div class="project-head">
+                <div>
+                  <h3>聊天软件前端实现</h3>
+                  <p>前端开发工程师</p>
+                </div>
+              </div>
+              <p class="project-summary">基于 React Native 完成 Android 即时通讯核心能力，包括会话列表、聊天窗口、单聊群聊、Socket
+                实时通信、离线消息、本地存储和资源缓存优化。</p>
+
+            </article>
+            <article class="project project-compact">
+              <div class="project-head">
+                <div>
+                  <h3>之硕信息科技考勤打卡平台-uni-app</h3>
+                  <p>前端开发工程师</p>
+                </div>
+              </div>
+              <p class="project-summary">负责企业考勤系统的全栈开发与持续迭代，覆盖考勤打卡、补卡申请、请假审批、加班管理、报销申请、考勤统计和通讯录等核心业务模块，支持微信小程序和 H5 多端部署。
+              </p>
+            </article>
+            <article class="project project-compact">
+              <div class="project-head">
+                <div>
+                  <h3>反爬虫系统</h3>
+                  <p>项目负责人</p>
+                </div>
+              </div>
+              <p class="project-summary">开发设计一套前端反爬虫系统，通过多维度策略有效防范恶意爬虫行为，保障数据安全与业务稳定。线上日累计拦截恶意请求 2亿+ 次。</p>
+            </article>
+            <article class="project project-compact">
+              <div class="project-head">
+                <div>
+                  <h3>电商后台管理系统-React</h3>
+                  <p>前端开发工程师</p>
+                </div>
+              </div>
+              <p class="project-summary">基于React+semiUI开发的后台管理系统，合并多个层级租户的统一管理系统</p>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="section two-column">
+          <div>
+            <h2 class="section-title">入职经历</h2>
+            <div class="timeline">
+              <div class="timeline-row">
+                <time>2023.02 - 2026.06</time>
+                <strong>正大天晴药业集团</strong>
+                <span>资深前端开发工程师</span>
+              </div>
+
+              <div class="timeline-row">
+                <time>2022.06 - 2022.10</time>
+                <strong>南京智芸科技有限公司</strong>
+                <span>前端组长</span>
+              </div>
+
+              <div class="timeline-row">
+                <time>2019.09 - 2022.05</time>
+                <strong>杭州之硕信息科技有限公司</strong>
+                <span>前端组长 / 爬虫组长</span>
+              </div>
+
+              <div class="timeline-row">
+                <time>2018.08 - 2019.07</time>
+                <strong>杭州正鋆企业管理有限公司</strong>
+                <span>爬虫开发工程师</span>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: space-between;">
+            <div>
+              <h2 class="section-title">教育背景</h2>
+              <p class="profile">2014.09 - 2017.07 无锡工艺职业技术学院 电子信息工程 / 计算机信息管理</p>
+            </div>
+            <div style="margin-top: 4mm;">
+              <h2 class="section-title">个人评价r</h2>
+              <p class="profile">乐观、持续学习、责任心强，具备较好的沟通协调与团队协作能力。关注业务结果、工程质量和用户体验，能在复杂项目中推进规范、组件化和稳定性建设。</p>
+            </div>
+          </div>
+
+
+
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

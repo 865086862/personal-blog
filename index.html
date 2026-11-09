@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta name="description" content="Yuan 的个人主页，分享前端作品、开发笔记与交互实验。" />
+    <title>Yuan Studio | Frontend Notes & Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=13" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="app.js?v=3"></script>
+  </head>
+  <body>
+    <div class="ambient ambient-pink" aria-hidden="true"></div>
+    <div class="ambient ambient-green" aria-hidden="true"></div>
+    <header class="site-header">
+      <a href="#home" class="brand" aria-label="回到主页"><span class="brand-avatar">Y</span><span>yuan<span class="brand-dot">.</span>studio</span></a>
+      <span class="header-note">A LITTLE PLACE ON THE INTERNET</span>
+      <a class="header-contact" href="#about" data-module-link>联系我 <span>↗</span></a>
+    </header>
+
+    <main class="page-shell">
+      <section class="home-view" data-view="home">
+        <div class="profile-block">
+          <div class="portrait-wrap">
+            <div class="portrait-halo" aria-hidden="true"></div>
+            <img class="portrait-fallback" src="3d-model/generated_model_20261109_103623_preview.png" alt="Yuan 的 3D 半身像" />
+            <model-viewer class="portrait-model" aria-label="Yuan 的 3D 半身像，可拖动旋转" camera-controls auto-rotate auto-rotate-delay="0" max-pixel-ratio="2" shadow-intensity="1"></model-viewer>
+            <span class="portrait-status"><i></i><span class="model-label">3D PORTRAIT</span></span>
+          </div>
+          <div class="profile-copy">
+            <div class="profile-kicker"><span class="verified">✓</span> FRONTEND DEVELOPER <span class="kicker-spark">✳</span></div>
+            <h1>你好，我是 <span>Yuan</span><span class="name-period">.</span></h1>
+            <p class="profile-intro">把想法做成好用、好看、也让人记得住的网页。</p>
+            <div class="profile-stats" aria-label="个人主页数据"><div><strong>UI</strong><span>界面</span></div><div><strong>JS</strong><span>交互</span></div><div><strong>3D</strong><span>实验</span></div></div>
+            <div class="profile-actions"><a href="resume.html" class="primary-action" target="_blank" rel="noopener">查看简历 <span>↗</span></a><a href="#about" class="secondary-action" data-module-link>微信联系</a></div>
+            <div class="profile-tags"><span>#creativecode</span><span>#frontend</span><span>#每天进步一点</span></div>
+          </div>
+        </div>
+
+        <div class="module-heading"><span>我的小宇宙</span><span class="module-heading-note">点一格，逛一格 <i>✳</i></span></div>
+        <nav class="tile-grid" aria-label="博客内容模块">
+          <a href="#projects" class="module-tile tile-work" data-module-link>
+            <div class="tile-art work-art" aria-hidden="true"><span class="work-window"><i></i><i></i><i></i><b>create<span>_</span></b><small>beautiful things</small></span><span class="work-sun"></span><span class="work-flower">✳</span></div>
+            <span class="tile-copy"><span><strong>作品集</strong><small>SELECTED WORKS</small></span><span class="tile-arrow">↗</span></span>
+          </a>
+          <a href="#journal" class="module-tile tile-journal" data-module-link>
+            <div class="tile-art journal-art" aria-hidden="true"><span class="journal-sticker">note<br />to self</span><span class="journal-title">灵感<br /><i>正在发生</i></span><span class="journal-date">AUG 2026</span><span class="journal-scribble">﹏</span></div>
+            <span class="tile-copy"><span><strong>开发手记</strong><small>THOUGHTS & NOTES</small></span><span class="tile-arrow">↗</span></span>
+          </a>
+          <a href="#lab" class="module-tile tile-lab" data-module-link>
+            <div class="tile-art lab-art" aria-hidden="true"><span class="lab-orbit orbit-a"></span><span class="lab-orbit orbit-b"></span><span class="lab-cube">✳</span><span class="lab-code">PLAY / TEST / REPEAT</span></div>
+            <span class="tile-copy"><span><strong>交互实验室</strong><small>PLAYGROUND</small></span><span class="tile-arrow">↗</span></span>
+          </a>
+          <a href="#about" class="module-tile tile-about" data-module-link>
+            <div class="tile-art about-art" aria-hidden="true"><img src="3d-model/generated_model_20261109_103623_preview.png" alt="" /><span class="about-stamp">NICE<br />TO MEET<br />YOU!</span></div>
+            <span class="tile-copy"><span><strong>关于我</strong><small>THE HUMAN HERE</small></span><span class="tile-arrow">↗</span></span>
+          </a>
+        </nav>
+        <footer class="home-footer"><span>MAKE WITH CURIOSITY <i>✳</i></span><span>DESIGNED BY YUAN · 2026</span><a href="#about" data-module-link>WECHAT / RESUME ↗</a></footer>
+      </section>
+
+      <section class="module-view" data-view="projects" hidden>
+        <a class="back-link" href="#home" data-module-link>← 回到主页</a>
+        <div class="view-heading"><span>01 / MY WORK</span><h2>做过的一些<span>有趣的事</span></h2><p>从一个小小的想法开始，慢慢把它变成真实的体验。</p></div>
+        <div class="project-cards">
+          <article class="project-card"><div class="project-visual project-visual-one"><div class="shop-window"><span class="shop-top">STUDIO / OBJECTS</span><b>Everyday,<br /><i>made special.</i></b><span class="shop-button">DISCOVER MORE ↗</span></div><span class="visual-orb"></span></div><div class="project-meta"><div><h3>Orbit Commerce</h3><p>为独立品牌打造的轻盈购物体验</p></div><span>REACT · WEBGL</span></div></article>
+          <article class="project-card"><div class="project-visual project-visual-two"><div class="field-sheet"><span>FIELDNOTES / 08</span><b>Make room<br />for wonder.</b><i>一款把阅读变成日常仪式的数字笔记</i></div><span class="field-shape"></span></div><div class="project-meta"><div><h3>Fieldnotes</h3><p>一个为慢下来设计的知识空间</p></div><span>VUE · MOTION</span></div></article>
+          <article class="project-card"><div class="project-visual project-visual-three"><div class="light-label">LIGHT<br /><span>FORM</span></div><div class="light-ball"></div><span class="light-axis"></span></div><div class="project-meta"><div><h3>Lightform Studio</h3><p>探索光影与实时渲染的交互实验</p></div><span>THREE · GLSL</span></div></article>
+        </div>
+      </section>
+
+      <section class="module-view" data-view="journal" hidden>
+        <a class="back-link" href="#home" data-module-link>← 回到主页</a>
+        <div class="view-heading"><span>02 / THE JOURNAL</span><h2>写给过程的<span>一些注脚</span></h2><p>关于代码、体验和那些突然亮起来的灵感。</p></div>
+        <div class="journal-page-grid">
+          <article class="journal-feature"><div class="journal-feature-art"><span>GOOD<br /><i>MOTION</i><br />MATTERS.</span><small>FIELD NOTE 018</small></div><div class="journal-meta">交互设计 <span>2026.08.12 · 6 分钟</span></div><h3>好的动效，是界面写给用户的一句话</h3><p>从反馈、节奏与过渡出发，聊聊动效怎样让页面更容易被理解。</p></article>
+          <div class="journal-list"><a href="#journal" class="journal-row"><time>08.04<br />2026</time><div><small>工程实践</small><h3>从组件边界开始，整理前端复杂度</h3><p>组件不是越小越好，边界应该从使用场景里长出来。</p></div><span>↗</span></a><a href="#journal" class="journal-row"><time>07.22<br />2026</time><div><small>性能笔记</small><h3>给 3D 模型一次轻巧的网页旅行</h3><p>渐进加载、模型预算和真实设备上的取舍。</p></div><span>↗</span></a><a href="#journal" class="journal-row"><time>06.16<br />2026</time><div><small>随手记</small><h3>在写代码之前，先把问题看清楚</h3><p>几种帮我找到正确问题的观察方法。</p></div><span>↗</span></a></div>
+        </div>
+      </section>
+
+      <section class="module-view" data-view="lab" hidden>
+        <a class="back-link" href="#home" data-module-link>← 回到主页</a>
+        <div class="view-heading"><span>03 / PLAYGROUND</span><h2>一些还在<span>生长的实验</span></h2><p>这里放下半成品、灵感和想弄明白的小问题。</p></div>
+        <div class="lab-gallery"><article class="lab-piece piece-letters"><span>TYPE STUDY 07</span><b>move<br /><i>with</i><br />meaning</b><small>CSS / VARIABLE TYPE</small></article><article class="lab-piece piece-shapes"><span>FORM STUDY 03</span><div class="shape-stack"><i></i><b></b><em></em></div><small>CANVAS / PHYSICS</small></article><article class="lab-piece piece-color"><span>COLOR STUDY 11</span><div class="color-stacks"><i></i><i></i><i></i><i></i><i></i></div><small>COLOR / LIGHT / DEPTH</small></article></div>
+      </section>
+
+      <section class="module-view" data-view="about" hidden>
+        <a class="back-link" href="#home" data-module-link>← 回到主页</a>
+        <div class="about-page"><div class="about-portrait"><img src="3d-model/generated_model_20261109_103623_preview.png" alt="Yuan 的 3D 半身像" /><span>YUAN / FRONTEND</span></div><div class="about-text"><span>04 / A LITTLE ABOUT ME</span><h2>你好，<br />谢谢你来看看。</h2><p>我是一名喜欢探索界面、动效与工程边界的前端工程师。比起追逐某种固定风格，我更在意每个细节是否贴合正在解决的问题。</p><p>工作之外，我会做 3D 小实验、记下新学到的东西，也会不断调整这个小小的网络角落。</p><div class="about-interests"><span>前端工程</span><span>微交互</span><span>3D 创作</span><span>持续学习</span></div><div class="about-contact"><section class="contact-method"><a class="wechat-code" href="wechat-qr.png" target="_blank" rel="noopener" aria-label="打开微信二维码大图"><img src="wechat-qr.png" alt="微信好友二维码" /><span>查看大图</span></a><div class="about-contact-copy"><strong>微信联系</strong><span>扫码添加我为好友</span></div></section><section class="contact-method"><a class="wechat-code" href="csdn-profile-qr.png" target="_blank" rel="noopener" aria-label="打开 CSDN 主页二维码大图"><img src="csdn-profile-qr.png" alt="CSDN 主页二维码" /><span>查看大图</span></a><div class="about-contact-copy"><strong>CSDN 博客</strong><span>扫码访问我的主页</span><a href="https://blog.csdn.net/weixin_48363291?spm=1008.2221.3001.5343" target="_blank" rel="noopener">打开 CSDN <span>↗</span></a></div></section><a class="about-resume-link" href="resume.html" target="_blank" rel="noopener">查看完整简历 <span>↗</span></a></div></div></div>
+      </section>
+    </main>
+
+    <div class="model-loading" aria-live="polite"><span class="loading-dot"></span><span class="loading-copy">正在召唤 3D 模型</span><span class="loading-percent">0%</span><div class="loading-track"><span></span></div></div>
+  </body>
+</html>
